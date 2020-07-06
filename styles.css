@@ -1,0 +1,75 @@
+html{
+	height: 100%;
+}
+body{
+	background-image:radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+	background-repeat:no-repeat;
+	/*height: 100%;*/
+	color:white;
+	padding:35px 30px;
+	font-family:"Barlow Semi Condensed";
+}
+button:focus{
+	/*outline:none;*/
+}
+.scorecard-container{
+	border:3px solid hsl(217, 16%, 45%);
+	border-radius:8px;
+	padding:13px 13px;
+	display:flex;
+	justify-content:space-between;
+}
+.logo-main{
+	height:55px;
+}
+.scorecard{
+	display:inline-block;
+	background-color:#fff;
+	color:black;
+	border-radius:5px;
+	padding:5px 20px;
+	text-align:center;
+}
+.score-title{
+	margin-bottom:0;
+	font-weight:600;
+	font-size:12px;
+	color:hsl(229, 64%, 46%);
+}
+.score-number{
+	font-weight:700;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+.icon-container{
+	border:10px solid;
+	background-color:white;
+	border-radius:100%;
+	padding:20px 25px;
+}
+.main-content{
+	margin:120px auto;
+}
+.paper{
+	border-color:hsl(230, 89%, 62%);
+}
+.scissors{
+	border-color: hsl(39, 89%, 49%);
+}
+.rock{
+	border-color:hsl(349, 71%, 52%);
+	padding:25px;
+}
+.rock-row{
+	margin-top:50px;
+}
+.scissors-paper-col{
+	margin-left:20px;
+	margin-right:20px;
+}
+.rules-button-row{
+	text-align:center;
+}
+.rules-button{
+	border-radius:5px;
+}
