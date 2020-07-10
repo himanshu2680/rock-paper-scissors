@@ -9,9 +9,13 @@ body{
 	padding:35px 30px;
 	font-family:"Barlow Semi Condensed";
 }
-button:focus{
+button:focus,{
 	background-color:#ddd;
 	outline:none;
+}
+a:hover{
+	text-decoration:none;
+	color:inherit;
 }
 .scorecard-container{
 	border:3px solid hsl(217, 16%, 45%);
@@ -70,8 +74,9 @@ button:focus{
 }
 .rules-button-row{
 	text-align:center;
+	color:#000;
 }
-.rules-button{
+.rules-button-open{
 	border-radius:5px;
 	background-color:rgba(255,255,255,0);
 	border:2px solid #fff;
@@ -79,12 +84,21 @@ button:focus{
 	padding:15px 40px;
 	margin-bottom:30px;
 }
+.rules-button-close{
+	color:#000;
+	margin-bottom:30px;
+	font-size: 72px;
+}
 #rules.rules-nav{
-	height:0;
+	height:00%;
 	width:100%;
 	background-color:#fff;
 	overflow:hidden;
 	position:fixed;
+	top:0;
+	left:0;
 	z-index:1;
 	transition:0.5s;
+	/*padding:120px 20px 45px;*/
+	text-align:center;
 }
