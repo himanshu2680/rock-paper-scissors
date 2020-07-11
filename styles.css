@@ -72,9 +72,9 @@ a:hover{
 	margin-left:20px;
 	margin-right:20px;
 }
-.rules-button-row{
-	text-align:center;
+.rules-button-close-row{
 	color:#000;
+	margin-top: 80px;
 }
 .rules-button-open{
 	border-radius:5px;
@@ -99,6 +99,8 @@ a:hover{
 	left:0;
 	z-index:1;
 	transition:0.5s;
-	/*padding:120px 20px 45px;*/
 	text-align:center;
+}
+.rules-content{
+	margin: 260px 20px auto;
 }
