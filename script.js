@@ -22,25 +22,29 @@ function startGame() {
 	console.log(housePicked);
 	var userIndex = namesArray.indexOf(userPicked);
 	var houseIndex = namesArray.indexOf(housePicked);
-	if (userIndex==1 && houseIndex==3) {
-		result="win"
+	if (userIndex==0 && houseIndex==2){
+		result="win";
 	}
-	else if (userIndex==3 && houseIndex==1) {
+	else if (userIndex==2 && houseIndex==0){
 		result="lose";
 	}
 	else{
-		if (userIndex>houseIndex) {
+		if (userIndex>houseIndex){
 			result="win";
 		}
 		else if (houseIndex>userIndex){
 			result="lose";
 		}
-		else if (houseIndex===userIndex) {
+		else if (houseIndex===userIndex){
 			result="tie";
 		}
-		else{
-			console.log("some error occured while assigning value index to user or house");
-		}
+		// else{
+		// 	console.log("some error occured while assigning value index to user or house");
+		// }
 	}
+	console.log(result);
+}
+function displayResult(argument) {
+	// body...
 }
 console.log("js working");
