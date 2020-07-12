@@ -31,27 +31,41 @@
     </div>
   </div>
   <div class="main-content">
-    <div class="row">
+    <div class="row display-none">
       <div class="col text-center scissors-paper-col">
         <button class="icon-container paper" id="paper">
-          <img src="images/icon-paper.svg" >
+          <img src="images/icon-paper.svg">
         </button>
       </div>
       <div class="col text-center scissors-paper-col">
         <button class="icon-container scissors" id="scissors">
-          <img src="images/icon-scissors.svg" >
+          <img src="images/icon-scissors.svg">
         </button>
       </div>
     </div>
-    <div class="row rock-row">
+    <div class="row" id="picked">
+      <div class="col text-center">
+        <button class="icon-container picked" id="userPicked">
+          <!-- <img src="images/icon-rock.svg"> -->
+        </button>
+        <P>YOU PICKED</P>
+      </div>
+      <div class="col text-center">
+        <button class="icon-container picked" id="housePicked">
+          <!-- <img src="images/icon-rock.svg"> -->
+        </button>
+        <p>THE HOUSE PICKED</p>
+      </div>
+    </div>
+    <div class="row rock-row display-none">
       <div class="col text-center">
         <button class="icon-container rock" id="rock">
-          <img src="images/icon-rock.svg" >
+          <img src="images/icon-rock.svg">
         </button>
       </div>
     </div>
   </div>
-  <div class="text-center">
+  <div class="text-center rules-row">
     <button class="rules-button-open" id="bt-open">RULES</button>
   </div>
   

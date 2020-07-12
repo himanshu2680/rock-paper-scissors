@@ -3,8 +3,8 @@ html{
 }
 body{
 	background-image:radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-	background-repeat:no-repeat;
-	height: 100%;
+/*	background-repeat:no-repeat;
+*/	height: 100%;
 	color:white;
 	padding:35px 30px;
 	font-family:"Barlow Semi Condensed";
@@ -78,11 +78,13 @@ a:hover{
 }
 .rules-button-open{
 	border-radius:5px;
-	background-color:rgba(255,255,255,0);
+	background-color:rgba(0,0,0,0);
 	border:2px solid #fff;
 	color:#fff;
 	padding:15px 40px;
 	margin-bottom:30px;
+	position:absolute;
+	/*bottom*/
 }
 .rules-button-close{
 	color:#000;
@@ -104,6 +106,17 @@ a:hover{
 .rules-content{
 	margin: 260px 20px auto;
 }
-.picked-col{
-	
+.picked{
+	/*background-color: #192845;*/
+	background-color: #fff;
+	border:none;
+	padding-top:100%;
+	width:100%;
+	position:relative;
+}
+.display-none{
+	display: none;
+}
+.rules-row{
+	position:relative;
 }

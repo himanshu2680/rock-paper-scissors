@@ -44,7 +44,7 @@ function startGame() {
 	}
 	console.log(result);
 }
-function displayResult(argument) {
-	// body...
+function displayResult() {
+	
 }
 console.log("js working");
