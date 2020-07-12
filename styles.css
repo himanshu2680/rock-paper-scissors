@@ -9,6 +9,7 @@ body{
 	padding:35px 30px;
 	font-family:"Barlow Semi Condensed";
 	letter-spacing:3px;
+	overflow:hidden;
 }
 button{
 	letter-spacing:3px;
