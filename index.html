@@ -37,7 +37,7 @@
 
   <div class="main-content">
 
-    <div class="row display-none">
+    <div class="row hide-later">
       <div class="col text-center scissors-paper-col">
         <button class="icon-container paper" id="paper"></button>
       </div>
@@ -48,26 +48,26 @@
       </div>
     </div>
 
-    <div class="row " id="picked">
+    <div class="row hide-now" id="picked">
       <div class="col text-center">
-        <button class="icon-container scissors" id="userPicked"></button>
+        <button class="icon-container " id="user-picked"></button>
         <P>YOU PICKED</P>
       </div>
       <div class="col text-center">
-        <button class="icon-container  rock" id="housePicked"></button>
+        <button class="icon-container " id="house-picked"></button>
         <p>THE HOUSE PICKED</p>
       </div>
     </div>
 
-    <div class="row result-row text-center">
-      <h1 style="display: inline-block;">YOU WIN!</h1>
+    <div class="row result-row text-center hide-now">
+      <h1 id="result"> </h1>
     </div>
 
-    <div class="row play-again-row">
+    <div class="row play-again-row hide-now">
       <button class="play-again">PLAY AGAIN</button>
     </div>
 
-    <div class="row rock-row display-none">
+    <div class="row rock-row hide-later">
       <div class="col text-center">
         <button class="icon-container rock" id="rock"></button>
       </div>

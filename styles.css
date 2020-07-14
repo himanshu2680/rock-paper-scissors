@@ -122,7 +122,7 @@ a:hover{
 	width:120px;
 	padding:auto;
 }
-.display-none{
+.hide-now{
 	display: none;
 }
 .result-row, .play-again-row{
@@ -131,10 +131,14 @@ a:hover{
 .result-row{
 	margin-top:65px;
 }
+#result{
+	display:inline-block;
+	font-weight:700;
+	font-size:larger;
+}
 .play-again{
 	background-color:#fff;
 	border:none;
 	padding:15px 40px;
 	border-radius:8px;
-
 }

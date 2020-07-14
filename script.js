@@ -1,6 +1,8 @@
 $('#bt-open').click(openNav);
 $('#bt-close').click(closeNav);
 var result = "";
+var userPicked = "";
+var housePicked = "";
 function openNav() {
 	$('#rules').css('height', '100%');
 }
@@ -14,9 +16,9 @@ for (var i = 0; i < namesArray.length; i++) {
 	$("#" + namesArray[i]).click(startGame);
 }
 function startGame() {
-	var userPicked = $(this).attr("id");
+	userPicked = $(this).attr("id");
 	var randomNumber = Math.floor(Math.random()*3);
-	var housePicked = namesArray[randomNumber];
+	housePicked = namesArray[randomNumber];
 	console.log(userPicked);
 	// console.log("click(r,p,s) working");
 	console.log(housePicked);
@@ -43,8 +45,27 @@ function startGame() {
 		// }
 	}
 	console.log(result);
+	displayResult();
 }
 function displayResult() {
-	
+	if (result==="tie") {
+		$("#result").text("IT'S A " + result.toUpperCase() + "!");
+	}
+	else{
+		$("#result").text("YOU " + result.toUpperCase() + "!");
+	}
+	$("#user-picked").addClass(userPicked);
+	// console.log(userPicked);
+	$("#house-picked").addClass(housePicked);
+	// console.log(housePicked);
+	$(".hide-later").css("display", "none");
+	$(".hide-now").css("display", "flex");
+}
+	$(".play-again").click(playAgain);
+function playAgain() {
+	$(".hide-now").css("display", "none");
+	$(".hide-later").css("display", "flex");
+	$("#user-picked").removeClass(userPicked);
+	$("#house-picked").removeClass(housePicked);
 }
 console.log("js working");
