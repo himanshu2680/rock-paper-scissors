@@ -115,7 +115,6 @@ a:hover{
 }
 .picked{
 	background-color: #192845;
-	background-color: #fff;
 	border-style:none;
 	border-width:0;
 	height:120px;
@@ -131,14 +130,18 @@ a:hover{
 .result-row{
 	margin-top:65px;
 }
+
 #result{
 	display:inline-block;
 	font-weight:700;
-	font-size:larger;
+	/*font-size:larger;*/
 }
 .play-again{
 	background-color:#fff;
 	border:none;
 	padding:15px 40px;
 	border-radius:8px;
+}
+@media (min-width:650px){
+
 }

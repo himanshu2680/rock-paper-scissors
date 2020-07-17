@@ -1,8 +1,11 @@
-$('#bt-open').click(openNav);
-$('#bt-close').click(closeNav);
 var result = "";
 var userPicked = "";
 var housePicked = "";
+var score = 0;
+
+$('#bt-open').click(openNav);
+$('#bt-close').click(closeNav);
+
 function openNav() {
 	$('#rules').css('height', '100%');
 }
@@ -15,6 +18,7 @@ var namesArray =["rock", "paper", "scissors"];
 for (var i = 0; i < namesArray.length; i++) {
 	$("#" + namesArray[i]).click(startGame);
 }
+
 function startGame() {
 	userPicked = $(this).attr("id");
 	var randomNumber = Math.floor(Math.random()*3);
@@ -26,16 +30,20 @@ function startGame() {
 	var houseIndex = namesArray.indexOf(housePicked);
 	if (userIndex==0 && houseIndex==2){
 		result="win";
+		score++;
 	}
 	else if (userIndex==2 && houseIndex==0){
 		result="lose";
+		score--;
 	}
 	else{
 		if (userIndex>houseIndex){
 			result="win";
+			score++;
 		}
 		else if (houseIndex>userIndex){
 			result="lose";
+			score--;
 		}
 		else if (houseIndex===userIndex){
 			result="tie";
@@ -47,22 +55,31 @@ function startGame() {
 	console.log(result);
 	displayResult();
 }
+
 function displayResult() {
-	if (result==="tie") {
-		$("#result").text("IT'S A " + result.toUpperCase() + "!");
-	}
-	else{
-		$("#result").text("YOU " + result.toUpperCase() + "!");
-	}
+	$("#house-picked").addClass("picked");
+	setTimeout(function() {
+		$("#house-picked").removeClass("picked");
+		$("#house-picked").addClass(housePicked);
+		if (result==="tie") {
+			$("#result").text("IT'S A " + result.toUpperCase() + "!");
+		}
+
+		else{
+			$("#result").text("YOU " + result.toUpperCase() + "!");
+		}
+		$(".score-number").text(score);
+	},500);
+
 	$("#user-picked").addClass(userPicked);
-	// console.log(userPicked);
-	$("#house-picked").addClass(housePicked);
-	// console.log(housePicked);
 	$(".hide-later").css("display", "none");
-	$(".hide-now").css("display", "flex");
+	$(".hide-now").css("display", "flex");	
 }
-	$(".play-again").click(playAgain);
+
+$(".play-again").click(playAgain);
+
 function playAgain() {
+	$("#result").text(" ");
 	$(".hide-now").css("display", "none");
 	$(".hide-later").css("display", "flex");
 	$("#user-picked").removeClass(userPicked);
