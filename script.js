@@ -3,6 +3,7 @@ var userPicked = "";
 var housePicked = "";
 var score = 0;
 
+document.addEventListener("keydown", keyHandler);
 $('#bt-open').click(openNav);
 $('#bt-close').click(closeNav);
 

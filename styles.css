@@ -7,6 +7,7 @@ body{
 	padding:35px 30px;
 	font-family:"Barlow Semi Condensed";
 	letter-spacing:3px;
+	text-align:center;
 }
 button{
 	letter-spacing:3px;
@@ -143,5 +144,10 @@ a:hover{
 	border-radius:8px;
 }
 @media (min-width:650px){
-
+	.main-content{
+		/*margin-left:17vw;
+		margin-right:17vw;*/
+		display:inline-block;
+		width:450px;
+	}
 }
