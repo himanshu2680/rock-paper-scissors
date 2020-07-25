@@ -9,6 +9,12 @@ body{
 	letter-spacing:3px;
 	text-align:center;
 }
+p{
+	margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
 button{
 	letter-spacing:3px;
 }
@@ -84,7 +90,7 @@ a:hover{
 }
 .rules-button-close-row{
 	color:#000;
-	margin-top: 80px;
+	margin-top: 70px;
 }
 .rules-button-open{
 	border-radius:8px;
@@ -149,5 +155,26 @@ a:hover{
 		margin-right:17vw;*/
 		display:inline-block;
 		width:450px;
+	}
+	.scorecard-container{
+		width: 450px;
+		display: inline-flex;
+	}
+	.icon-container{
+		/* height: 180px; */
+		/* width: 180px; */
+		transform: scale(1.5);
+		margin: 20px;
+	}
+	.rules-image{
+		height: 350px;
+	}
+}
+@media (min-width:850px){
+	.rules-row{
+		text-align: right;
+	}
+	.scorecard-container{
+		width: 680px;
 	}
 }
