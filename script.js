@@ -3,7 +3,7 @@ var userPicked = "";
 var housePicked = "";
 var score = 0;
 
-// document.addEventListener("keydown", keyHandler);
+document.addEventListener("keydown", keyHandler);
 $('#bt-open').click(openNav);
 $('#bt-close').click(closeNav);
 
@@ -13,6 +13,11 @@ function openNav() {
 
 function closeNav() {
 	$('#rules').css('height', '0');
+}
+
+function keyHandler(e) {
+	var keyPressed = e.key;
+	console.log(keyPressed);
 }
 
 var namesArray =["rock", "paper", "scissors"];

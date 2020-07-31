@@ -103,9 +103,11 @@ a:hover{
 	/* margin-bottom:30px; */
 }
 .rules-button-close{
-	color:#000;
-	margin-bottom:30px;
-	font-size: 72px;
+	border-radius:8px;
+	background-color:rgba(0,0,0,0);
+	border:2px solid #B1B4C5;
+	color:#B1B4C5;
+	padding:15px 40px;
 }
 #rules.rules-nav{
 	height:0;
@@ -167,7 +169,7 @@ a:hover{
 		height: 350px;
 	}
 	.rules-button-close-row{
-		margin-top:100px;
+		margin-top:110px;
 	}
 }
 @media (min-width:850px){
