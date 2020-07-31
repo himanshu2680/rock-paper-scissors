@@ -18,7 +18,7 @@
   <div id="rules" class="rules-nav">
     <div class="rules-content">
       <img src="images/image-rules.svg" class="rules-image">
-      <br><p>&nbsp;</p>
+      <br><p class="rules-score">You score a +1 point for every time you win and -1 for every time you lose</p>
       <div class="rules-button-close-row text-center">
         <a class="rules-button-close"id="bt-close" href="#">&times;</a>
       </div>
@@ -34,46 +34,46 @@
       </div>
     </div>
   </div>
+  <div class="content-container">
+    <div class="main-content">
 
-  <div class="main-content">
-
-    <div class="row hide-later icon-row">
-      <div class="col text-center scissors-paper-col">
-        <button class="icon-container paper" id="paper"></button>
+      <div class="row hide-later icon-row">
+        <div class="col text-center scissors-paper-col">
+          <button class="icon-container paper" id="paper"></button>
+        </div>
+        <div class="col text-center scissors-paper-col">
+          <button class="icon-container scissors" id="scissors">
+          </button>
+        </div>
       </div>
-      <div class="col text-center scissors-paper-col">
-        <button class="icon-container scissors" id="scissors">
-        </button>
+
+      <div class="row hide-now icon-row" id="picked">
+        <div class="col text-center">
+          <button class="icon-container " id="user-picked"></button>
+          <P>YOU PICKED</P>
+        </div>
+        <div class="col text-center">
+          <button class="icon-container " id="house-picked"></button>
+          <p>THE HOUSE PICKED</p>
+        </div>
       </div>
-    </div>
 
-    <div class="row hide-now icon-row" id="picked">
-      <div class="col text-center">
-        <button class="icon-container " id="user-picked"></button>
-        <P>YOU PICKED</P>
+      <div class="row result-row text-center hide-now">
+        <h1 id="result"> </h1>
       </div>
-      <div class="col text-center">
-        <button class="icon-container " id="house-picked"></button>
-        <p>THE HOUSE PICKED</p>
+
+      <div class="row play-again-row hide-now">
+        <button class="play-again">PLAY AGAIN</button>
       </div>
-    </div>
 
-    <div class="row result-row text-center hide-now">
-      <h1 id="result"> </h1>
-    </div>
-
-    <div class="row play-again-row hide-now">
-      <button class="play-again">PLAY AGAIN</button>
-    </div>
-
-    <div class="row rock-row hide-later">
-      <div class="col text-center">
-        <button class="icon-container rock" id="rock"></button>
+      <div class="row rock-row hide-later">
+        <div class="col text-center">
+          <button class="icon-container rock" id="rock"></button>
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
-
 
   <div class="text-center rules-row">
     <button class="rules-button-open" id="bt-open">RULES</button>

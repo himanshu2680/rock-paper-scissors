@@ -100,7 +100,7 @@ a:hover{
 	border:2px solid #fff;
 	color:#fff;
 	padding:15px 40px;
-	margin-bottom:30px;
+	/* margin-bottom:30px; */
 }
 .rules-button-close{
 	color:#000;
@@ -167,21 +167,21 @@ a:hover{
 		height: 350px;
 	}
 	.rules-button-close-row{
-		margin-top:0;
+		margin-top:100px;
 	}
 }
 @media (min-width:850px){
 	.rules-row{
-		text-align: right;
-		display: inline-block;
-		margin-left:auto;
-		float: right;
+		display:flex;
+		flex-direction: row-reverse;
+		padding-right: 20px;
 	}
 	.scorecard-container{
 		width: 680px;
 	}
-	.main-content{
-		clear:right;
-		clear: both;
+	.rules-button-close-row{
+		display: flex;
+		flex-direction: row-reverse;
+		padding-right: 80px;
 	}
 }
