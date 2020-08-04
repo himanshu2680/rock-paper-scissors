@@ -17,17 +17,27 @@ p{
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-button{
+button, button:focus{
 	letter-spacing:3px;
+	outline: none;
 }
-button:focus{
+button.play-again:focus , button.icon-container:focus{
 	background-color:#ddd;
-	outline:none;
+}
+button.rules-button-open:focus {
+	background-color: rgba(85, 85, 85, 0.3);
 }
 a:hover{
 	text-decoration:none;
 	color:inherit;
 }
+
+.black{
+	color: black;
+}
+
+/*<fold scorecard >>>>>> */
+
 .scorecard-container{
 	border:3px solid hsl(217, 16%, 45%);
 	border-radius:8px;
@@ -57,6 +67,16 @@ a:hover{
 	margin-bottom:0;
 	padding-bottom:0;
 }
+
+/*</fold> <<<<< scorecard */
+
+
+/* <fold main content */
+
+.main-content{
+	margin:120px auto;
+}
+
 .icon-container{
 	border:10px solid;
 	background-color:white;
@@ -66,9 +86,6 @@ a:hover{
 	padding:auto;
 	background-repeat:no-repeat;
 	background-position:center;
-}
-.main-content{
-	margin:120px auto;
 }
 .paper{
 	border-color:hsl(230, 89%, 62%);
@@ -90,17 +107,27 @@ a:hover{
 	margin-left:20px;
 	margin-right:20px;
 }
-.rules-button-close-row{
+
+/* </fold> main content */
+
+
+
+.modal-header-mine{
+	display: flex;
+	justify-content: space-between;
+	padding: 50px;
+}
+
+/* .rules-button-close-row{
 	color:#000;
 	margin-top: 70px;
-}
+} */
 .rules-button-open{
 	border-radius:8px;
 	background-color:rgba(0,0,0,0);
 	border:2px solid #fff;
 	color:#fff;
 	padding:15px 40px;
-	/* margin-bottom:30px; */
 }
 .rules-button-close{
 	border-radius:8px;
@@ -109,7 +136,7 @@ a:hover{
 	color:#B1B4C5;
 	padding:15px 40px;
 }
-#rules.rules-nav{
+/* #rules.rules-nav{
 	height:0;
 	width:100%;
 	background-color:#fff;
@@ -123,7 +150,7 @@ a:hover{
 }
 .rules-content{
 	margin: 200px 20px auto;
-}
+} */
 .picked{
 	background-color: #192845;
 	border-style:none;
@@ -185,5 +212,11 @@ a:hover{
 		display: flex;
 		flex-direction: row-reverse;
 		padding-right: 80px;
+	}
+}
+
+@media (max-width:650px) {
+	button.play-again:focus , button.icon-container:focus , button.rules-button-open:focus{
+		background-color: inherit;
 	}
 }
