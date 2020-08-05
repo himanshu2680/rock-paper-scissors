@@ -2,10 +2,11 @@ var result = "";
 var userPicked = "";
 var housePicked = "";
 var score = 0;
+// var keyPressedId = "";
 
-document.addEventListener("keydown", keyHandler);
-$('#bt-open').click(openNav);
-$('#bt-close').click(closeNav);
+// document.addEventListener("keydown", keyHandler);
+// $('#bt-open').click(openNav);
+// $('#bt-close').click(closeNav);
 
 function openNav() {
 	$('#rules').css('height', '100%');
@@ -15,10 +16,13 @@ function closeNav() {
 	$('#rules').css('height', '0');
 }
 
-function keyHandler(e) {
-	var keyPressed = e.key;
-	console.log(keyPressed);
-}
+// function keyHandler(e) {
+// 	var keyPressed = e.key;
+// 	console.log(keyPressed);
+// 	if (keyPressed==="r") {
+// 		keyPressedId = "rock";
+// 	}
+// }
 
 var namesArray =["rock", "paper", "scissors"];
 for (var i = 0; i < namesArray.length; i++) {
@@ -26,11 +30,16 @@ for (var i = 0; i < namesArray.length; i++) {
 }
 
 function startGame() {
+	// if (namesArray.includes($(this).attr("id"))) {
+	//   userPicked = $(this).attr("id");
+	// }
+	// else {
+	//   userPicked = keyPressedId;
+	// }
 	userPicked = $(this).attr("id");
 	var randomNumber = Math.floor(Math.random()*3);
 	housePicked = namesArray[randomNumber];
 	console.log(userPicked);
-	// console.log("click(r,p,s) working");
 	console.log(housePicked);
 	var userIndex = namesArray.indexOf(userPicked);
 	var houseIndex = namesArray.indexOf(housePicked);
